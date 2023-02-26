@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Store } from "@/utils/store";
 import Head from "next/head";
 import Link from "next/link";
