@@ -6,6 +6,9 @@ const nextConfig = {
     // next line is not required
     path: "http://localhost:3000/images",
   },
+  flags: {
+    DEV_SSR: false,
+  },
 };
 
 module.exports = nextConfig;
