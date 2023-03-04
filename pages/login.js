@@ -88,7 +88,12 @@ export default function LoginScreen() {
           </div>
           <div className="mb-4">
             Don&apos;t have an account? &nbsp;
-            <Link href="register">Register</Link>
+            <Link
+              href="register"
+              className=" text-blue-600 hover:text-blue-800"
+            >
+              Register
+            </Link>
           </div>
         </div>
       </form>
