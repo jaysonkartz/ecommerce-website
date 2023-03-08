@@ -2,6 +2,7 @@ import Checkoutwizard from "@/components/Checkoutwizard";
 import Layout from "@/components/Layout";
 import { Store } from "@/utils/store";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
 import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 
@@ -16,6 +17,7 @@ export default function ShippingScreen() {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
   const { shippingAddress } = cart;
+  const router = useRouter();
 
   useEffect(() => {
     setValue("fullName", shippingAddress.fullName);
@@ -43,6 +45,7 @@ export default function ShippingScreen() {
         },
       })
     );
+    router.push("/payment");
   };
 
   return (
