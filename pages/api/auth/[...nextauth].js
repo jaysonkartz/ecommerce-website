@@ -1,8 +1,9 @@
 import User from "@/models/User";
 import db from "@/utils/db";
-import NextAuth from "next-auth/next";
 import bcryptjs from "bcryptjs";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+
 
 export default NextAuth({
   session: {
@@ -15,8 +16,8 @@ export default NextAuth({
       return token;
     },
     async session({ session, token }) {
-      if (token?._id) session._id = token._id;
-      if (token?.isAdmin) session.isAdmin = token.isAdmin;
+      if (token?._id) session.user._id = token._id;
+      if (token?.isAdmin) session.user.isAdmin = token.isAdmin;
       return session;
     },
   },
