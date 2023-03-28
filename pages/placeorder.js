@@ -60,7 +60,6 @@ export default function PlaceOrderScreen() {
     } catch (err) {
       setLoading(false);
       toast.error(getError(err));
-      console.log(err);
     }
     
   };
