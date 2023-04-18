@@ -67,7 +67,7 @@ function OrderHistoryScreen() {
                   </td>
                   <td className="p-5">
                     {order.isDelivered
-                      ? `${order.deliverAt.substring(0, 10)}`
+                      ? `${order.deliveredAt.substring(0, 10)}`
                       : "Not Delivered"}
                   </td>
                   <td className="p-5  text-blue-600">
